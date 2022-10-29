@@ -1,1 +1,16 @@
-{}
+{
+  "hosting": {
+    "public": "dist/arg-pro2",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
