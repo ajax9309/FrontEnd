@@ -1,0 +1,37 @@
+<div class="card">
+  <h1>Educación</h1>
+  <div class="col-lg-1"></div>
+  <div class="col-lg-11">
+    <button type="button" class="btn btn-primary" routerLink="/neweduc" *ngIf="isLogged">
+      <i class="bi bi-plus-square"></i>
+      Agregar educación
+    </button>
+  </div>
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Educ of educ">
+          <td>
+            <strong>{{ Educ.nomEduc }}</strong>
+          </td>
+          <td>{{ Educ.descEduc }}</td>
+          <td *ngIf="isLogged">
+            <button
+              class="btn btn-secondary"
+              routerLink="/editeduc/{{ Educ.id }}"
+            >
+              <i class="bi bi-pencil-square"></i>
+            </button>
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="deleteEduc(Educ.id)">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

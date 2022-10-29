@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="row">
+        <h1>Hard & Soft Skills</h1>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-primary" routerLink="/newskill" *ngIf="isLogged">
+                <i class="bi bi-plus-square"></i>
+                Agregar habilidad
+            </button>
+        </div>
+        <div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let skill of skill"
+            ><circle-progress>
+            [title]="(skill.nomSkill)"
+            [showTitle]="true"
+            [percent]="(skill.porcSkill)"
+            [radius]="100"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="800"
+            </circle-progress>
+        <div *ngIf="isLogged">
+            <button class="btn btn-secondary" routerLink="/editSkill/{{ skill.id }}">
+                <i class="bi bi-pencil-square"></i>
+            </button>
+            <button class="btn btn-danger" (click)="deleteSkill(skill.id)">
+                <i class="bi bi-trash"></i>
+            </button>
+        </div>
+    </div>
+</div>    
+

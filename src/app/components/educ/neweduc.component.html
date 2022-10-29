@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div>
+                <div class="form-group">
+                    <label for="nomEduc">Nombre de institución</label>
+                    <input  type="text" class="form-control" id="nomEduc" name="nomEduc"[(ngModel)]="nomEduc" required>          
+                </div>
+                <div class="form-group">
+                    <label for="descEduc">Descripción de los estudios</label>
+                    <input  type="text" class="form-control" id="descEduc" name="descEduc"[(ngModel)]="descEduc" required>         
+                </div>
+                <div>
+                    <button class="btn btn-success">
+                        Guardar
+                    </button>
+                    <button class="btn btn-light" routerLink="">
+                        Cancelar
+                    </button>
+                    
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

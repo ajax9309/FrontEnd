@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div>
+                <div class="form-group">
+                    <label for="nomSkill">Nombre de habilidad</label>
+                    <input  type="text" class="form-control" id="nomSkill" name="nomSkill"[(ngModel)]="nomSkill" required>          
+                </div>
+                <div class="form-group">
+                    <label for="porcSkill">Nivel de habilidad (0 a 100)</label>
+                    <input  type="text" class="form-control" id="porcSkill" name="porcSkill"[(ngModel)]="porcSkill" required>         
+                </div>
+                <div>
+                    <button class="btn btn-success">
+                        Guardar
+                    </button>
+                    <button class="btn btn-light" routerLink="">
+                        Cancelar
+                    </button>
+                    
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

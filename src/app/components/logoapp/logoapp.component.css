@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0.5px;
+}
+.socialmedia{
+    margin-right: 0.5px;
+}
+.socialmedia img{
+    margin:0.1em ;    
+}
+.btn{
+    border-width: medium;
+}
+#logoapp{
+    width: 150px ;
+
+}
+img{
+    width: 40px;
+}

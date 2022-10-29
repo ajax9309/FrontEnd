@@ -1,0 +1,13 @@
+button{
+    padding: 8px;
+    margin: 8px;
+    margin-left: 0px
+}
+.card{
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.row{
+    margin: 10px;
+}

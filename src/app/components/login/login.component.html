@@ -1,0 +1,13 @@
+<div class="loginBox"> <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
+    <h3>Iniciar Sesión</h3>
+
+    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+        <div class="inputBox"> <input id="nombreUsuario" type="text" name="nombreUsuario" placeholder="Usuario"[(ngModel)]="nombreUsuario"required> <input id="password" type="password" name="Password" placeholder="Contraseña"[(ngModel)]="password"required> </div> <input type="submit" name="" value="Login">
+    </form>
+
+    <!--a href="#">¿Olvidó su contraseña?<br> </a-->
+    <div class="text-center">
+        <p style="color: #59238F;">Registrarse</p>
+    </div>
+    
+</div>
