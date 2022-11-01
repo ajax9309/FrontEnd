@@ -14,14 +14,14 @@ export class EditaboutComponent implements OnInit {
 
   constructor(private personaService: PersonaService,private activatedRouter: ActivatedRoute,
     private router: Router
-    /*,public imagesvc: ImgsvcService*/) { }
+    ,public imagesvc: ImgsvcService) { }
 
   ngOnInit(): void {const id=this.activatedRouter.snapshot.params['id'];
   this.personaService.detail(id).subscribe(
     data=>{
       this.persona=data;
-    },err=>{
-      alert("Error al modificar en init");
+    },err =>{
+      alert("Error al modificar (init)");
       this.router.navigate(['']);
     }
   )
@@ -30,22 +30,21 @@ export class EditaboutComponent implements OnInit {
 
   onUpdate():void{
     const id=this.activatedRouter.snapshot.params['id'];
-    //this.persona.img=this.imagesvc.url
+    this.persona.img=this.imagesvc.url
     this.personaService.update(id,this.persona).subscribe(
       data=>{
       this.router.navigate(['']);
-
-    },err=>{
-      alert("Error al modificar en update");
+    },err =>{
+      alert("Error al modificar (update)");
       this.router.navigate(['']);
     }
   )
 }
 
   upImg($event:any){
-    /*const id = this.activatedRouter.snapshot.params['id'];
-    const name= "perfil#"+id;
-    this.imagesvc.upImg($event,name)*/
+    const id = this.activatedRouter.snapshot.params['id'];
+    const name= "about-"+id;
+    this.imagesvc.upImg($event,name)
 
 
   }

@@ -18,7 +18,10 @@
                 <div class="form-group">
                     <label for="img">Imágen</label>
                     <input  type="file" class="form-control" id="img" name="img"[(ngModel)]="persona.img" (change)="upImg($event)"
-                        accept=".jpg, .jpeg, .bmp" >         
+                        accept=".jpg, .jpeg, .bmp, .png" >         
+                </div>
+                <div class="img">
+                    <img [src]="imagesvc.url" width="150px">
                 </div>
                 <div>
                     <button class="btn btn-success">

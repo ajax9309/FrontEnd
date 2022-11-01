@@ -1,7 +1,14 @@
 div{
     background-color: #00358e;
 }
+.banner{
+    background-color: azure;
+}
 
+.card{
+    margin: 5px;
+    
+}
 app-social{
     float:right;
     margin-top: 2px;

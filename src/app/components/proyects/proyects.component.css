@@ -1,6 +1,12 @@
+.card{
+    margin: 10px;
+    padding: 5px;
+}
+div{
+    background-color: azure;
+}
 .row{
-    padding: 20px;
-    background-color:azure;
+    margin: 5px;
 }
 .contenedor{
     width: auto;

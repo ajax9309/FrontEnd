@@ -1,10 +1,16 @@
 /*acerca mio css*/
 .row{
     padding: 20px;
+    margin: 5px;
 }
 div{
-    background-color: rgb(122, 87, 168);
+    background-color:aliceblue;
     text-align: center;
+}
+
+.card{
+    margin: 10px;
+    padding: 5px;
 }
 /*nombre css*/
 #name{
@@ -13,13 +19,15 @@ div{
     margin-left: 35 px;
 }
 /*perfil css*/
-@media (min-width:576px){
+
+@media (min-width:610px){
     #pic{
         position:absolute ;
-        width: 150px;
+        width: 140px;
         border-radius: 100%;
         box-shadow: 5px 5px 5px black;
-        top:500px;
+        top: -85px;
+        left: 200px;
     }
     .descrip{
         display: flex;
@@ -27,12 +35,47 @@ div{
         align-items: center;
     }
 }
-@media (max-width:575px){
-    #pic{
-        position:absolute ;
-        width: 250px;
+@media (max-width:609px) {
+    #pic {
+        position: absolute;
+        width: 130px;
         border-radius: 100%;
         box-shadow: 5px 5px 15px black;
-        top:450px;
+        top: -85px;
+    }
+}
+
+@media (max-width:575px) {
+    #pic {
+        position: absolute;
+        width: 130px;
+        border-radius: 100%;
+        box-shadow: 5px 5px 15px black;
+        top: 15px;
+        left: 160px;
+    }
+
+    
+}
+
+@media (max-width:480px) {
+    #pic {
+        position: absolute;
+        width: 125px;
+        border-radius: 100%;
+        box-shadow: 5px 5px 15px black;
+        top: 15px;
+        left: 150px;
+    }
+}
+
+@media (max-width:400px) {
+    #pic {
+        position: absolute;
+        width: 100px;
+        border-radius: 100%;
+        box-shadow: 5px 5px 15px black;
+        top: 15px;
+        left: 120px;
     }
 }

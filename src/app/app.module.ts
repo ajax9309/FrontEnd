@@ -25,6 +25,9 @@ import { EditeducComponent } from './components/educ/editeduc.component';
 import { EditskillComponent } from './components/hardysoft/editskill.component';
 import { NewskillComponent } from './components/hardysoft/newskill.component';
 import { EditaboutComponent } from './components/about/editabout.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +56,9 @@ import { EditaboutComponent } from './components/about/editabout.component';
     FormsModule,
     BrowserAnimationsModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
     
   ],
   providers: [InterceptSvc],

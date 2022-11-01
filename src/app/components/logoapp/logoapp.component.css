@@ -12,6 +12,7 @@
 }
 .btn{
     border-width: medium;
+    margin: 10px;
 }
 #logoapp{
     width: 150px ;

@@ -1,35 +1,35 @@
 <div class="card">
-  <h1>Experiencia Laboral</h1>
-  <div class="col-lg-2">
-    <button type="button" class="btn btn-primary" routerLink="/newxp" *ngIf="isLogged"><i class="bi bi-plus-square"></i>
-      Agregar experiencia
-    </button>
-  </div>
+  <div class="row">
+    <h1>Experiencia Laboral</h1>
+    <div class="col-lg-2">
+      <button type="button" class="btn btn-primary" routerLink="/newxp" *ngIf="isLogged"><i
+          class="bi bi-plus-square"></i>
+        Agregar experiencia
+      </button>
+    </div>
 
-  <div class="col lg 1"></div>
-  <div class="col-lg-11">
-    <table class="table">
-      <tbody>
-        <tr *ngFor="let Explaboral of xp">
-          <td>
-            <strong>{{ Explaboral.nombreE }}</strong>
-          </td>
-          <td>{{ Explaboral.descripcionE }}</td>
-          <td *ngIf="isLogged">
-            <button
-              class="btn btn-secondary"
-              routerLink="/editxp/{{ Explaboral.id }}"
-            >
-              <i class="bi bi-pencil-square"></i>
-            </button>
-          </td>
-          <td *ngIf="isLogged">
-            <button class="btn btn-danger" (click)="deleteXp(Explaboral.id)" >
+    <div class="col lg 1"></div>
+    <div class="col-lg-10">
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let Explaboral of xp">
+            <td>
+              <strong>{{ Explaboral.nombreE }}</strong>
+            </td>
+            <td>{{ Explaboral.descripcionE }}</td>
+            <td *ngIf="isLogged">
+              <button class="btn btn-secondary" routerLink="/editxp/{{ Explaboral.id }}">
+                <i class="bi bi-pencil-square"></i>
+              </button>
+            </td>
+            <td *ngIf="isLogged">
+              <button class="btn btn-danger" (click)="deleteXp(Explaboral.id)">
                 <i class="bi bi-trash"></i>
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
