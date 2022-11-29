@@ -7,16 +7,16 @@
             </button>
         </div>
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <img id="pic" src={{persona.img}} class="img-fluid">
+            <img id="pic" src={{persona?.img}} class="img-fluid">
         </div>
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <p id="name">{{persona.nombre}} {{persona.apellido}}</p>
-            <p>Full Stack Developer JR</p>
+            <p id="name">{{persona?.nombre}} {{persona?.apellido}}</p>
+            <p>{{persona?.nivel}}</p>
         </div>
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 descrip">
             <span>
                 <h1>Acerca de mi</h1>
-                <p>{{persona.descrip}}
+                <p>{{persona?.descrip}}
                 </p>
             </span>
         </div>

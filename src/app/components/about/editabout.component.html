@@ -1,33 +1,38 @@
 <div class="card" *ngIf="persona">
+    <h4>Editar persona</h4>
     <div class="row">
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div>
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
+                    <label for="nombre"><b>Nombre</b></label>
                     <input  type="text" class="form-control" id="nombre" name="nombre"[(ngModel)]="persona.nombre" required>          
                 </div>
                 <div class="form-group">
-                    <label for="apellido">Apellido</label>
+                    <label for="apellido"><b>Apellido</b></label>
                     <input  type="text" class="form-control" id="apellido" name="apellido"[(ngModel)]="persona.apellido" required>         
                 </div>
                 <div class="form-group">
-                    <label for="descrip">Descripcion</label>
+                    <label for="nivel"><b>Nivel</b></label>
+                    <input  type="text" class="form-control" id="nivel" name="nivel"[(ngModel)]="persona.nivel" required>         
+                </div>
+                <div class="form-group">
+                    <label for="descrip"><b>Descripcion</b></label>
                     <input  type="text" class="form-control" id="descrip" name="descrip"[(ngModel)]="persona.descrip" required>         
                 </div>
                 <div class="form-group">
-                    <label for="img">Imágen</label>
+                    <label for="img"><b>Imágen</b></label>
                     <input  type="file" class="form-control" id="img" name="img"[(ngModel)]="persona.img" (change)="upImg($event)"
                         accept=".jpg, .jpeg, .bmp, .png" >         
                 </div>
                 <div class="img">
-                    <img [src]="imagesvc.url" width="150px">
+                    <img [src]="imagesvc.urlImg" width="150px">
                 </div>
                 <div>
                     <button class="btn btn-success">
                         Guardar
                     </button>
-                    <button class="btn btn-light" routerLink="">
+                    <button class="btn btn-light" (click)="cancel()">
                         Cancelar
                     </button>
                 </div>

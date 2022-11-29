@@ -4,10 +4,14 @@ button{
     margin-left: 0px
 }
 .card{
-    margin: 10px;
-    border-radius: 20px;
+    margin: 40px;
+    border-radius: 10px;
 }
 
 .row{
+    margin: 10px;
+}
+
+h4{
     margin: 10px;
 }

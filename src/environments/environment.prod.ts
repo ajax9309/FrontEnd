@@ -10,5 +10,5 @@ export const environment = {
     messagingSenderId: '272786910371',
   },
   production: true,
-  URL: 'https://axios9309.herokuapp.com/'
+  URL: 'https://portfolio-alexzomboe.koyeb.app/'
 };

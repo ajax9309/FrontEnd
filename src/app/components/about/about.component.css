@@ -27,7 +27,7 @@ div{
         border-radius: 100%;
         box-shadow: 5px 5px 5px black;
         top: -85px;
-        left: 200px;
+        left: 75px;
     }
     .descrip{
         display: flex;
@@ -48,11 +48,11 @@ div{
 @media (max-width:575px) {
     #pic {
         position: absolute;
-        width: 130px;
+        width: 115px;
         border-radius: 100%;
         box-shadow: 5px 5px 15px black;
-        top: 15px;
-        left: 160px;
+        top: 70px;
+        left: 205px;
     }
 
     
@@ -61,10 +61,10 @@ div{
 @media (max-width:480px) {
     #pic {
         position: absolute;
-        width: 125px;
+        width: 105px;
         border-radius: 100%;
         box-shadow: 5px 5px 15px black;
-        top: 15px;
+        top: 75px;
         left: 150px;
     }
 }
@@ -72,10 +72,25 @@ div{
 @media (max-width:400px) {
     #pic {
         position: absolute;
-        width: 100px;
+        width: 90px;
         border-radius: 100%;
         box-shadow: 5px 5px 15px black;
-        top: 15px;
-        left: 120px;
+        top: 70px;
+        left: 130px;
+    }
+
+    
+}
+
+@media (max-width:340px) {
+    #pic {
+        position: absolute;
+        width: 70px;
+        border-radius: 100%;
+        box-shadow: 5px 5px 15px black;
+        top: 70px;
+        left: 105px;
     }
 }
+
+

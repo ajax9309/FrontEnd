@@ -16,8 +16,9 @@ export class EditaboutComponent implements OnInit {
     private router: Router
     ,public imagesvc: ImgsvcService) { }
 
-  ngOnInit(): void {const id=this.activatedRouter.snapshot.params['id'];
-  this.personaService.detail(id).subscribe(
+  ngOnInit(): void {
+    const id=this.activatedRouter.snapshot.params['id'];
+    this.personaService.detail(id).subscribe(
     data=>{
       this.persona=data;
     },err =>{
@@ -25,12 +26,13 @@ export class EditaboutComponent implements OnInit {
       this.router.navigate(['']);
     }
   )
-
+  this.imagesvc.clearUrl();
   }
 
   onUpdate():void{
+    
     const id=this.activatedRouter.snapshot.params['id'];
-    this.persona.img=this.imagesvc.url
+    this.persona.img=this.imagesvc.urlImg
     this.personaService.update(id,this.persona).subscribe(
       data=>{
       this.router.navigate(['']);
@@ -39,13 +41,19 @@ export class EditaboutComponent implements OnInit {
       this.router.navigate(['']);
     }
   )
+
 }
 
   upImg($event:any){
     const id = this.activatedRouter.snapshot.params['id'];
-    const name= "about-"+id;
+    const name= "about-"+ id;
     this.imagesvc.upImg($event,name)
+  }
 
+  cancel(): void {
+
+    this.imagesvc.clearUrl();
+    this.router.navigate(['']);
 
   }
 }

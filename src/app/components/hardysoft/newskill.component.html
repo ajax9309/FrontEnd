@@ -1,5 +1,6 @@
 <div class="card">
     <div class="row">
+        <h4>Nueva habilidad</h4>
         <div>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
             <div>
@@ -8,8 +9,12 @@
                     <input  type="text" class="form-control" id="nomSkill" name="nomSkill"[(ngModel)]="nomSkill" required>          
                 </div>
                 <div class="form-group">
-                    <label for="porcSkill">Nivel de habilidad (0 a 100)</label>
-                    <input  type="text" class="form-control" id="porcSkill" name="porcSkill"[(ngModel)]="porcSkill" required>         
+                    <label for="porcSkill">Porcentaje de habilidad</label>
+                    <input  type="number" value="1" min="1" max="100" class="form-control" id="porcSkill" name="porcSkill"[(ngModel)]="porcSkill" required>         
+                </div>
+                <div class="form-group">
+                    <label for="colorSkill">Color del circulo</label>
+                    <input type="color" class="form-control form-control-color" id="colorSkill" name="colorSkill" [(ngModel)]="colorSkill" required> 
                 </div>
                 <div>
                     <button class="btn btn-success">

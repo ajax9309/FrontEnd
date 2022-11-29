@@ -1,14 +1,15 @@
 <div class="card">
   <div class="row">
     <h1>Experiencia Laboral</h1>
-    <div class="col-lg-2">
+    <div class="col-lg-11">
       <button type="button" class="btn btn-primary" routerLink="/newxp" *ngIf="isLogged"><i
           class="bi bi-plus-square"></i>
         Agregar experiencia
       </button>
     </div>
-
-    <div class="col lg 1"></div>
+    <div class="row" *ngIf="xp?.length == 0">
+      <p>No hay experiencia para mostrar</p>
+    </div>
     <div class="col-lg-10">
       <table class="table">
         <tbody>

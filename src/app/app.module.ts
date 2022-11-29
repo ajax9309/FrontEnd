@@ -28,6 +28,9 @@ import { EditaboutComponent } from './components/about/editabout.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { NewproyectComponent } from './components/proyects/newproyect.component';
+import { EditproyectComponent } from './components/proyects/editproyect.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +51,10 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     EditeducComponent,
     EditskillComponent,
     NewskillComponent,
-    EditaboutComponent
+    EditaboutComponent,
+    NewproyectComponent,
+    EditproyectComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,

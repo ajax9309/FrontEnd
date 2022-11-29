@@ -28,7 +28,7 @@ head {
     transform: translate(-50%, -50%);
     width: 350px;
     min-height: 200px;
-    background: #000000;
+    background: azure;
     border-radius: 10px;
     padding: 40px;
     box-sizing: border-box
@@ -43,7 +43,7 @@ head {
 h3 {
     margin: 0;
     padding: 0 0 20px;
-    color: #59238F;
+    color: black;
     text-align: center
 }
 
@@ -92,7 +92,7 @@ h3 {
     outline: none;
     height: 40px;
     font-size: 16px;
-    background: #59238F;
+    background: #28742c;
     color: #fff;
     border-radius: 20px;
     cursor: pointer
@@ -114,3 +114,15 @@ a:hover {
 p {
     color: #0000ff
 }
+
+input:invalid + span::after {
+    content: "✖";
+    padding-left: 5px;
+    color: orangered;
+  }
+  
+  input:valid + span::after {
+    content: "✓";
+    padding-left: 5px;
+    color: #28742c;
+  }

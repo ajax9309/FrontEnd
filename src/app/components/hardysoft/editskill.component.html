@@ -1,5 +1,6 @@
 <div class="card" *ngIf="skill">
     <div class="row">
+        <h4>Editar habilidad</h4>
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div>
@@ -8,8 +9,12 @@
                     <input  type="text" class="form-control" id="nomSkill" name="nomSkill"[(ngModel)]="skill.nomSkill" required>          
                 </div>
                 <div class="form-group">
-                    <label for="porcSkill">Descripción de estudios</label>
-                    <input  type="text" class="form-control" id="porcSkill" name="porcSkill"[(ngModel)]="skill.porcSkill" required>         
+                    <label for="porcSkill">Porcentaje de habilidad</label>
+                    <input  type="number" value="1" min="1" max="100" class="form-control" id="porcSkill" name="porcSkill"[(ngModel)]="skill.porcSkill" required>         
+                </div>
+                <div class="form-group">
+                    <label for="colorSkill">Color del circulo</label>
+                    <input type="color" class="form-control form-control-color" id="colorSkill" name="colorSkill" [(ngModel)]="skill.colorSkill" required> 
                 </div>
                 <div>
                     <button class="btn btn-success">

@@ -11,6 +11,7 @@ import { SkillsService } from 'src/app/services/skills.service';
 export class NewskillComponent implements OnInit {
   nomSkill:string;
   porcSkill:number;
+  colorSkill:string;
 
   constructor(private skills: SkillsService,private router:Router) { }
 
@@ -18,7 +19,7 @@ export class NewskillComponent implements OnInit {
   }
 
   onCreate():void{
-    const skills=new Skills(this.nomSkill,this.porcSkill);
+    const skills=new Skills(this.nomSkill,this.porcSkill, this.colorSkill);
     this.skills.save(skills).subscribe(
       data=>{
         alert("Habilidad guardada");

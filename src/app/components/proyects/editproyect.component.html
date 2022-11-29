@@ -1,0 +1,36 @@
+<div class="card" *ngIf="proyecto">
+    <div class="row">
+        <h4>Editar proyecto</h4>
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <div>
+                <div class="form-group">
+                    <label for="nomProyect"><b>Nombre del Proyecto</b></label>
+                    <input  type="text" class="form-control" id="nomProyect" name="nomProyect"[(ngModel)]="proyecto.nomProyect" required>          
+                </div>
+                <div class="form-group">
+                    <label for="descProyect"><b>Descripción del Proyecto</b></label>
+                    <input  type="text" class="form-control" id="descProyect" name="descProyect"[(ngModel)]="proyecto.descProyect" required>         
+                </div>
+                <div class="form-group">
+                    <label for="imgProyect"><b>Imagen</b></label>
+                    <input type="file" class="form-control" id="imgProyect" name="imgProyect"
+                        [(ngModel)]="proyecto.imgProyect" (change)="upImg($event)"
+                        accept=".jpg, .jpeg, .bmp, .png">
+                </div>
+                <div class="img">
+                    <img [src]="imagesvc.urlImg" width="150px">
+                </div>
+                <div>
+                    <button class="btn btn-success">
+                        Actualizar
+                    </button>
+                    <button class="btn btn-light" (click)="cancel()">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

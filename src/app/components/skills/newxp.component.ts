@@ -29,6 +29,7 @@ export class NewxpComponent implements OnInit {
         this.router.navigate(['']);
       }
       )
+      
   }
 
 }

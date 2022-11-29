@@ -7,6 +7,8 @@ import { EditskillComponent } from './components/hardysoft/editskill.component';
 import { NewskillComponent } from './components/hardysoft/newskill.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { EditproyectComponent } from './components/proyects/editproyect.component';
+import { NewproyectComponent } from './components/proyects/newproyect.component';
 import { EditxpComponent } from './components/skills/editxp.component';
 import { NewxpComponent } from './components/skills/newxp.component';
 
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path:'editeduc/:id',component: EditeducComponent },
   {path:'newskill',component: NewskillComponent},
   {path:'editskill/:id',component: EditskillComponent },
-  {path:'editabout/:id',component: EditaboutComponent }
+  {path:'editabout/:id',component: EditaboutComponent },
+  {path:'newproyect',component: NewproyectComponent },
+  {path:'editproyect/:id',component: EditproyectComponent }
 
 ];
 
